@@ -1,0 +1,31 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="card">
+                <div class="text-center">
+                    <h1>Login</h1>
+                    <h6>Please enter email & password !</h6>
+                </div>
+                <form>
+                    <form [formGroup]="loginForm" (ngSubmit)="login()">
+                        <div class="mb-3">
+                          <label for="inputEmail" class="form-label">Email address</label>
+                          <input formControlName="email" type="email" class="form-control" id="inputEmail" aria-describedby="emailHelp">
+                          <div id="invalid-name-message" 
+                            *ngIf="isFieldInvalid('email')" 
+                            class="invalid-feedback d-block">Please enter email</div>
+                        </div>
+                        <div class="mb-3">
+                          <label for="inputPassword" class="form-label">Password</label>
+                          <input formControlName="password" type="password" class="form-control" minlength="4" id="inputPassword" required>
+                          <div id="invalid-name-message" 
+                            *ngIf="isFieldInvalid('password')" 
+                            class="invalid-feedback d-block">Please enter password</div>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Login</button>
+                      </form>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

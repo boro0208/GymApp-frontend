@@ -1,1 +1,4 @@
-/* You can add global styles to this file, and also import other style files */
+.swal2-styled.swal2-confirm{
+    background-color: hsla(205, 46%, 30%, 1)!important;
+    box-shadow: none!important;
+}
